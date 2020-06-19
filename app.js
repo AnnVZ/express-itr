@@ -32,6 +32,8 @@ var multer = require('multer');
 var upload = multer();
 app.use(upload.array());
 
+users.createSchema();
+
 app.all('/', function (req, res, next) {
   authorization.check(req) ? res.redirect('/table') : next();
 });
@@ -61,7 +63,7 @@ app.post('/login', async function (req, res) {
   let user = await users.getUser(req.body.username);
   if (user) {
     if (req.body.password == user.password) {
-      if (!user.blocked) {
+      if (user.blocked == 0) {
         await users.updateUserLoginDate(req.body.username);
         authorization.set(req, true, user.id);
         res.redirect('/table');

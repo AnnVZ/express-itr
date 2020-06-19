@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
+
+    <title>Table</title>
+</head>
+
+<body class="container-fluid">
+    <a href="/logout">
+        <div class="logout text-primary">Log out</div>
+    </a>
+    <section class="row">
+        <div class="col-10 offset-1">
+            <h1 class="row text-primary justify-content-center display-4">Users</h1>
+            <br>
+            <form method="POST" class="row">
+                <div class="btn-group">
+                    <button type="submit" formaction="/block" class="action btn" id="block">
+                        <img src="./img/block.png" alt="block" title="block">
+                    </button>
+                    <button type="submit" formaction="/unblock" class="action btn" id="unblock">
+                        <img src="./img/unblock.png" alt="unblock" title="unblock">
+                    </button>
+                    <button type="submit" formaction="/delete" class="action btn" id="delete">
+                        <img src="./img/delete.png" alt="delete" title="delete">
+                    </button>
+                </div>
+                <table class="table table-responsive-md table-hover text-secondary" id="table">
+                    <thead>
+                        <tr class="text-primary">
+                            <th>
+                                <div class="custom-control custom-checkbox">
+                                    <input name="head" type="checkbox" class="custom-control-input" id="head_input">
+                                    <label class="custom-control-label" for="head_input" id="head_label"></label>
+                                </div>
+                            </th>
+                            <th>id</th>
+                            <th>name</th>
+                            <th>e-mail</th>
+                            <th>registration</th>
+                            <th>last log in</th>
+                            <th>status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="root">
+                        
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </section>
+
+    <script type="module" src="./js/table.js"></script>
+</body>
+
+</html>

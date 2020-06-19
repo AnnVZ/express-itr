@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
+
+    <title>Log in</title>
+
+</head>
+
+<body class="container-fluid">
+    <section class="row">
+        <div class="col-md-6 col-12 login">
+            <h1 class="text-center text-primary offset-xl-2 offset-md-4 offset-3">Log in</h1>
+            <form action="/login" method="POST" class="needs-validation form-to-validate" id="login_form" novalidate>
+                <div class="form-group row">
+                    <label for="name" class="col-xl-3 col-md-4 col-3 col-form-label text-right">Name:</label>
+                    <div class="col col-xl-8 input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="pre_name1">@</span>
+                        </div>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="name"
+                            aria-describedby="pre-name" autocomplete="off" required>
+                        <div class="invalid-feedback">
+                            Please enter your username.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-xl-3 col-md-4 col-3 col-form-label text-right">Password:</label>
+                    <div class="col col-xl-8">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="password"
+                            required>
+                        <div class="invalid-feedback">
+                            Please enter your password.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row justify-content-center offset-xl-2 offset-md-4 offset-3">
+                    <div>
+                        <button type="submit" class="btn btn-primary">Log in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 col-12 auth-option">
+            <h1 class="text-center text-primary offset-md-4 offset-xl-0 offset-3">Sign up</h1>
+            <form action="/signup" method="POST" class="needs-validation form-to-validate" id="signup_form" novalidate>
+                <div class="form-group row">
+                    <label for="name" class="col-xl-2 col-md-4 col-3 col-form-label text-right">Name:</label>
+                    <div class="col col-xl-8 input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="pre_name2">@</span>
+                        </div>
+                        <input type="text" class="form-control" name="username" id="singup_name" placeholder="name"
+                            aria-describedby="pre-name" autocomplete="off" required>
+                        <div class="invalid-feedback">
+                            Please choose your username.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-xl-2 col-md-4 col-3 col-form-label text-right">E-mail:</label>
+                    <div class="col col-xl-8">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="e-mail"
+                            autocomplete="off" required>
+                        <div class="invalid-feedback">
+                            Please enter correct e-mail.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-xl-2 col-md-4 col-3 col-form-label  text-right">Password:</label>
+                    <div class="col col-xl-8">
+                        <input type="password" class="form-control" name="password" id="password_signup"
+                            placeholder="password" required>
+                        <input type="password" class="form-control" name="password_rep" id="password_rep"
+                            placeholder="repeat password" required>
+                        <small class="form-text text-muted">Your password must be 1+ characters long</small>
+                        <div class="invalid-feedback" id="password_feedback">
+                            Please choose your password.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row justify-content-center offset-xl-0 offset-md-4 offset-3">
+                    <div>
+                        <button type="submit" class="btn btn-primary">Sign up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script type="module" src="./js/index.js"></script>
+
+</body>
+
+</html>

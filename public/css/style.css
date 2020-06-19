@@ -1,0 +1,61 @@
+body {
+    background: linear-gradient(45deg, #c7e2ce, #bdc0e0) no-repeat center top / cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+section {
+    width: 100%;
+    margin-top: 120px;
+    margin-bottom: 30px;
+}
+
+.login {
+    margin-bottom: 70px;
+}
+
+table {
+    font-size: 20px;
+}
+
+.input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.custom-control-label::before {
+    background-color: initial;
+    border-color: #6c757d;
+}
+
+#head_label::before {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.logout {
+    text-decoration: underline;
+    cursor: pointer;
+    position: fixed;
+    font-size: 22px;
+    top: 20px;
+    right: 30px;
+}
+
+.action {
+    width: fit-content;
+    height: fit-content;
+}
+
+.action img {
+    width: 30px;
+    height: 30px;
+}
+
+button {
+    background-color: initial;
+}
+
+.btn {
+    border-radius: 0;
+}
